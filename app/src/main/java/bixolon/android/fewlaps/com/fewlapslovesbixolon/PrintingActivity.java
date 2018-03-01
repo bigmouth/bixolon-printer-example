@@ -124,6 +124,11 @@ public class PrintingActivity extends Activity {
                             printText("and get the source!", BixolonPrinter.ALIGNMENT_CENTER, BixolonPrinter.TEXT_ATTRIBUTE_FONT_C);
 
                             bixolonPrinterApi.lineFeed(5, false);
+
+                            Bitmap bmp = BitmapFactory.decodeResource(getResources(), R.drawable.check);
+
+                            bixolonPrinterApi.defineNvImage(bmp, 300,50, 1);
+                            bixolonPrinterApi.printNvImage(1, false);
                         } catch (Exception e) {
                             Log.e("ERROR", "Printing", e);
                         }
