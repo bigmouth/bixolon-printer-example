@@ -105,7 +105,6 @@ public class PrintingActivity extends Activity {
                             bixolonPrinterApi.lineFeed(2, false); //It's like printing \n\n
                             Bitmap fewlapsBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.fewlaps);
 
-                            //BEWARE THE DOG: The 260 and 50 values are really MAGIC. They aren't as siple as width and height. It can break the Bitmap print.
                             bixolonPrinterApi.printBitmap(fewlapsBitmap, BixolonPrinter.ALIGNMENT_CENTER, 260, 50, false);
 
                             Thread.sleep(PRINTING_SLEEP_TIME); // Don't strees the printer while printing the Bitmap... it don't like it.
